@@ -88,8 +88,8 @@ Keep a simulator/no-hardware path when possible:
 
 - storage comparison belongs in `learning-data-stores`
 - MQTT broker operations belong in `learning-platform-engineering`
-- protocol design beyond IoT usage belongs in `learning-networking-protocols`
-- language-only MicroPython notes can be mirrored in `learning-language-sandboxes`
+- protocol design beyond IoT usage belongs in `learning-platform-engineering`
+- language-only MicroPython setup notes can be mirrored in `learning-build-systems`
 
 ## First Milestones
 
