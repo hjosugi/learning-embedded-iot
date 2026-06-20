@@ -4,6 +4,14 @@ Microcontroller, embedded systems, sensors, firmware, and IoT communication expe
 
 Last verified: 2026-06-20
 
+## Runnable Starter Project
+
+Start without hardware by running deterministic sensor telemetry:
+
+```bash
+python3 projects/sensor-simulator/sensor_simulator.py --samples 5
+```
+
 ## Why This Repo Exists
 
 This repo is for the hardware-adjacent layer:
