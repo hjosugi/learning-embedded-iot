@@ -10,6 +10,7 @@ Start without hardware by running deterministic sensor telemetry:
 
 ```bash
 python3 projects/sensor-simulator/sensor_simulator.py --samples 5
+python3 projects/sensor-simulator/test_sensor_simulator.py
 ```
 
 ## Why This Repo Exists
