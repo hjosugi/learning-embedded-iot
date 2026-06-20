@@ -27,6 +27,7 @@
 
             shellHook = ''
               echo "learning-embedded-iot dev shell"
+              echo "Try: python3 projects/electronics-basics-lab/test_circuit_calc.py"
               echo "Try: python3 projects/sensor-simulator/test_sensor_simulator.py"
               echo "Try: micropython projects/micropython-rp2-blink/main.py"
             '';

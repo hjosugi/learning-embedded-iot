@@ -23,6 +23,13 @@ python3 projects/sensor-simulator/test_sensor_simulator.py
 
 ## Target Hands-On Projects
 
+Electronics basics before wiring hardware:
+
+```bash
+python3 projects/electronics-basics-lab/circuit_calc.py
+python3 projects/electronics-basics-lab/test_circuit_calc.py
+```
+
 MicroPython RP2 blink (runs on the host via a `machine` shim; same `main.py`
 later flashes to a Pico):
 
@@ -39,6 +46,7 @@ Then copy `projects/micropython-rp2-blink/main.py` to a Pico/Pico 2 as `main.py`
 This repo is for the hardware-adjacent layer:
 
 - microcontroller basics
+- electronics basics: voltage, current, resistors, LEDs, buttons, ADC, level shifting
 - firmware build and flash flows
 - GPIO, I2C, SPI, UART, PWM, ADC
 - sensors and small displays
@@ -64,14 +72,15 @@ Each example should make these constraints explicit:
 ## Learning Path
 
 1. Microcontroller mental model
-2. MicroPython on RP2/ESP32
-3. Raspberry Pi Pico / Pico 2 basics
-4. ESP-IDF basics for ESP32
-5. Arduino-style quick experiments
-6. Zephyr RTOS basics
-7. Sensors and buses: I2C, SPI, UART
-8. MQTT to local data stores
-9. Power, sleep, watchdogs, and firmware update notes
+2. Electronics foundations: Ohm's law, LEDs, buttons, voltage dividers, ADC
+3. MicroPython on RP2/ESP32
+4. Raspberry Pi Pico / Pico 2 basics
+5. ESP-IDF basics for ESP32
+6. Arduino-style quick experiments
+7. Zephyr RTOS basics
+8. Sensors and buses: I2C, SPI, UART
+9. MQTT to local data stores
+10. Power, sleep, watchdogs, and firmware update notes
 
 ## Planned Structure
 
@@ -87,6 +96,7 @@ examples/
 docs/
   2026-learning-items.md
   board-selection.md
+  electronics-foundations.md
   hardware-safety.md
   repository-profile.md
 ```
@@ -108,11 +118,12 @@ Keep a simulator/no-hardware path when possible:
 ## Study Loop
 
 1. read the safety note before wiring anything
-2. run the simulator or generated-data path when available
-3. flash the smallest blink example before adding network code
-4. add one sensor and log raw readings
-5. send readings to a local broker or data-store example
-6. document board, firmware version, wiring, and failure notes
+2. calculate the circuit before connecting power
+3. run the simulator or generated-data path when available
+4. flash the smallest blink example before adding network code
+5. add one sensor and log raw readings
+6. send readings to a local broker or data-store example
+7. document board, firmware version, wiring, and failure notes
 
 ## What Belongs Elsewhere
 
