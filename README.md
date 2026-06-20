@@ -2,7 +2,15 @@
 
 Microcontroller, embedded systems, sensors, firmware, and IoT communication experiments.
 
-Last verified: 2026-06-20
+Last verified: 2026-06-21
+
+## Development Environment
+
+If MicroPython is missing locally, enter the Nix shell:
+
+```bash
+nix develop
+```
 
 ## Runnable Starter Project
 
@@ -12,6 +20,19 @@ Start without hardware by running deterministic sensor telemetry:
 python3 projects/sensor-simulator/sensor_simulator.py --samples 5
 python3 projects/sensor-simulator/test_sensor_simulator.py
 ```
+
+## Target Hands-On Projects
+
+MicroPython RP2 blink (runs on the host via a `machine` shim; same `main.py`
+later flashes to a Pico):
+
+```bash
+python3 projects/micropython-rp2-blink/main.py
+python3 -m unittest discover -s projects/micropython-rp2-blink -p 'test_*.py'
+```
+
+Then copy `projects/micropython-rp2-blink/main.py` to a Pico/Pico 2 as `main.py`
+(do not copy `machine.py`). See that project's README for the full flash flow.
 
 ## Why This Repo Exists
 
