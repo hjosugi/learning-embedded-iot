@@ -17,6 +17,20 @@ This repo is for the hardware-adjacent layer:
 - MQTT and IoT data ingestion
 - safety notes for wiring and power
 
+## What This Repo Teaches
+
+This repo connects software habits to physical constraints.
+
+Each example should make these constraints explicit:
+
+- board and firmware toolchain
+- flash/debug workflow
+- pin wiring and voltage assumptions
+- sensor protocol
+- power and sleep behavior
+- how secrets are configured on a device
+- how to simulate or read the lesson without hardware
+
 ## Learning Path
 
 1. Microcontroller mental model
@@ -60,6 +74,30 @@ Keep a simulator/no-hardware path when possible:
 - MicroPython UNIX port for language basics
 - Zephyr native simulation for RTOS basics
 - generated sensor data for database and MQTT lessons
+
+## Study Loop
+
+1. read the safety note before wiring anything
+2. run the simulator or generated-data path when available
+3. flash the smallest blink example before adding network code
+4. add one sensor and log raw readings
+5. send readings to a local broker or data-store example
+6. document board, firmware version, wiring, and failure notes
+
+## What Belongs Elsewhere
+
+- storage comparison belongs in `learning-data-stores`
+- MQTT broker operations belong in `learning-platform-engineering`
+- protocol design beyond IoT usage belongs in `learning-networking-protocols`
+- language-only MicroPython notes can be mirrored in `learning-language-sandboxes`
+
+## First Milestones
+
+1. Add MicroPython blink for RP2/Pico.
+2. Add ESP32 sensor reading with a generated-data fallback.
+3. Add ESP-IDF Wi-Fi/MQTT example with no committed secrets.
+4. Add Zephyr blinky and board-selection notes.
+5. Add MQTT-to-DuckDB or MQTT-to-InfluxDB handoff notes.
 
 ## References
 
